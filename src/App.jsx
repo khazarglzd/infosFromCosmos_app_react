@@ -1,9 +1,14 @@
+import Footer from "./components/Footer"
+import Main from "./components/Main"
+import Sidebar from "./components/Sidebar"
 
 function App() {
 
   return (
     <>
-      <h1>App</h1>
+      <Sidebar></Sidebar>
+      <Main />
+      <Footer />
     </>
   )
 }

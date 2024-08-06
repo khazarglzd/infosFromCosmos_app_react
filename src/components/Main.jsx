@@ -1,6 +1,9 @@
 
+
 export default function Main() {
     return (
-        <div>Main</div>
+        <div>
+            <img src="mars.png" alt="mars-demo-pic" />
+        </div>
     )
 }
