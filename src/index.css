@@ -75,7 +75,7 @@ footer button {
 }
 
 footer button i {
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 footer button:hover {
@@ -196,4 +196,8 @@ footer button:hover {
     left: unset;
     width: 100vw;
   }
+}
+
+i {
+  font-size: 2rem;
 }
