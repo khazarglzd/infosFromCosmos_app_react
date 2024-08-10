@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar"
 function App() {
 
   const [showModal, setShowModal] = useState(false)
-  const [data, setData] = useState([])
+  const [data, setData] = useState(null)
   const [loading, setLoading] = useState(false)
 
 
@@ -35,9 +35,17 @@ function App() {
 
   return (
     <>
-      <Main />
-      {showModal && (<Sidebar handleToggleModal={handleToggleModal} />)}
-      <Footer handleToggleModal={handleToggleModal} />
+      {data ? (<Main data={data} />) : (
+        <div className="loadingState">
+          <i className="fa-solid fa-gear"></i>
+        </div>
+      )}
+      {showModal && (
+        <Sidebar data={data} handleToggleModal={handleToggleModal} />
+      )}
+      {data && (
+        <Footer data={data} handleToggleModal={handleToggleModal} />
+      )}
     </>
   )
 }
